@@ -6,18 +6,15 @@ using UnityEngine;
 
 public class SpriteBehavior : MonoBehaviour
 {
-   private SpriteRenderer rendererObj;
-
-   private void Start()
-   {
-    //allows control over sprite renderers
+    private SpriteRenderer rendererObj;
+    
+    private void Start()
+    {
         rendererObj = GetComponent<SpriteRenderer>();
-   }
+    }
 
-   public void ChangeRendererColor(ColorID obj)
-   {
+    public void ChangeRendererColor (ColorID obj)
+    {
         rendererObj.color = obj.value;
-   }
-   //Don't want to variables.
-
+    }
 }
