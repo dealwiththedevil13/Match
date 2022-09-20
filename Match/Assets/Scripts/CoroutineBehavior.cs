@@ -19,7 +19,7 @@ public class CoroutineBehavior : MonoBehaviour
 
         while(canRun)
         {
-            yield return wffuObj;
+            yield return wfsObj;
             Debug.Log("Run on start");
         }
     }
