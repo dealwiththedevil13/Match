@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class CoroutineBehavior : MonoBehaviour
 {
-    public bool canRun = true;
+    public UnityEvent startEvent, repeatEvent, endEvent;
+    
+    public IntData counterNum;
     public float seconds = 3.0f;
     private WaitForSeconds wfsObj;
     private WaitForFixedUpdate wffuObj;
@@ -13,14 +16,17 @@ public class CoroutineBehavior : MonoBehaviour
     {
         wfsObj = new WaitForSeconds(seconds);
         wffuObj = new WaitForFixedUpdate();
-        Debug.Log("Start");
+        
+        startEvent.Invoke();
         yield return wfsObj;
-        Debug.Log("Late Start");
 
-        while(canRun)
+        while(counterNum.value > 0)
         {
+            repeatEvent.Invoke();
+            counterNum.value--;
             yield return wfsObj;
-            Debug.Log("Run on start");
+
         }
+        endEvent.Invoke();
     }
 }
