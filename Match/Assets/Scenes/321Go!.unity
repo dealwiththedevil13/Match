@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 165776119}
   - component: {fileID: 165776121}
   - component: {fileID: 165776120}
+  - component: {fileID: 165776122}
   m_Layer: 5
   m_Name: GoLabel
   m_TagString: Untagged
@@ -202,6 +203,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 165776118}
   m_CullTransparentMesh: 1
+--- !u!114 &165776122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 165776118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1393d36537aea8f4eab2523e4075e6d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &669726162
 GameObject:
   m_ObjectHideFlags: 0
@@ -417,9 +433,51 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3cec6a9fbe74dd4fbd6220d4a4a2fac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  repeatEvent:
+  startEvent:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 900438591}
+        m_TargetAssemblyTypeName: CoroutineBehavior, Assembly-CSharp
+        m_MethodName: StartCounting
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  startCountEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 3fa7f205fa9ba43449566bd9c9b89e94, type: 2}
+        m_TargetAssemblyTypeName: IntData, Assembly-CSharp
+        m_MethodName: SetValue
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  repeatCountEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 165776122}
+        m_TargetAssemblyTypeName: TextLabelBehavior, Assembly-CSharp
+        m_MethodName: UpdateLabel
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 3fa7f205fa9ba43449566bd9c9b89e94, type: 2}
+          m_ObjectArgumentAssemblyTypeName: IntData, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: On
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 891163031}
         m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
         m_MethodName: SetTrigger
@@ -432,7 +490,38 @@ MonoBehaviour:
           m_StringArgument: On
           m_BoolArgument: 0
         m_CallState: 2
-  counterNum: 3
+  endCountEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 891163031}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Hold
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 165776120}
+        m_TargetAssemblyTypeName: UnityEngine.UI.Text, UnityEngine.UI
+        m_MethodName: set_text
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Go!
+          m_BoolArgument: 0
+        m_CallState: 2
+  repeatUntilFalseEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  canRun: 0
+  counterNum: {fileID: 11400000, guid: 3fa7f205fa9ba43449566bd9c9b89e94, type: 2}
   seconds: 1
 --- !u!4 &900438592
 Transform:
