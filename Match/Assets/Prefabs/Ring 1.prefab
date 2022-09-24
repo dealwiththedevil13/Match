@@ -33,7 +33,7 @@ Transform:
   m_GameObject: {fileID: 2848749028375865281}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4320760707032619185}
   m_Father: {fileID: 0}
@@ -222,13 +222,13 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 5210356847536852698}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 2704461834860635718}
+        m_TargetAssemblyTypeName: ColorMatchBehavior, Assembly-CSharp
+        m_MethodName: ChangeColor
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgument: {fileID: 2628258154787650408}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.SpriteRenderer, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -324,6 +324,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1776236560259518726, guid: 44a385879d14b2c40b25075c4e9803bc, type: 3}
+      propertyPath: m_MaskInteraction
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8399741698749883572, guid: 44a385879d14b2c40b25075c4e9803bc, type: 3}
       propertyPath: m_Name
       value: HiddenDot
@@ -344,13 +348,13 @@ PrefabInstance:
     - {fileID: 1112522928586973841, guid: 44a385879d14b2c40b25075c4e9803bc, type: 3}
     - {fileID: 2289315058748240897, guid: 44a385879d14b2c40b25075c4e9803bc, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 44a385879d14b2c40b25075c4e9803bc, type: 3}
---- !u!1 &5210356847536852698 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8399741698749883572, guid: 44a385879d14b2c40b25075c4e9803bc, type: 3}
-  m_PrefabInstance: {fileID: 4386232672145418862}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4320760707032619185 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 516061933885305567, guid: 44a385879d14b2c40b25075c4e9803bc, type: 3}
+  m_PrefabInstance: {fileID: 4386232672145418862}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &2628258154787650408 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 1776236560259518726, guid: 44a385879d14b2c40b25075c4e9803bc, type: 3}
   m_PrefabInstance: {fileID: 4386232672145418862}
   m_PrefabAsset: {fileID: 0}

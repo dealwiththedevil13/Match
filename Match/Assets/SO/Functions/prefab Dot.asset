@@ -10,6 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73db5053701cfc046934e38b5b3e2807, type: 3}
-  m_Name: prefab Dot
+  m_Name: Prefab Dot
   m_EditorClassIdentifier: 
   prefab: {fileID: 8399741698749883572, guid: 44a385879d14b2c40b25075c4e9803bc, type: 3}
