@@ -1,18 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
-public class GameAction : MonoBehaviour
+[CreateAssetMenu]
+public class GameAction : ScriptableObject
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+  public UnityAction raise;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+  public void RaiseAction()
+  {
+    raise?.Invoke();
+  }
 }
