@@ -6,18 +6,18 @@ using UnityEngine.Events;
 public class CoroutineBehavior : MonoBehaviour
 {
     public UnityEvent startEvent, startCountEvent, repeatCountEvent, endCountEvent, repeatUntilFalseEvent;
-    
-    public bool canRun;
+
+    private bool canRun;
     public IntData counterNum;
     public float seconds = 3.0f;
     private WaitForSeconds wfsObj;
     private WaitForFixedUpdate wffuObj;
 
-   /*public bool canRun()
+    public bool CanRun
     {
         get => canRun;
         set => canRun = value;
-    }*/
+    }
 
     private void Start()
     {
@@ -48,13 +48,13 @@ public class CoroutineBehavior : MonoBehaviour
 
     public void StartRepeatUntilFalse()
     {
-        canRun = true;
+        CanRun = true;
         StartCoroutine(RepeatUntilFalse());
     }
 
     private IEnumerator RepeatUntilFalse()
     {
-        while(canRun)
+        while(CanRun)
         {
             yield return wfsObj;
             repeatUntilFalseEvent.Invoke();
