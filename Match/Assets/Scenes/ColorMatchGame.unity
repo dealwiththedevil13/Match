@@ -144,13 +144,13 @@ MonoBehaviour:
   onRaiseEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6228054}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 713682434}
+        m_TargetAssemblyTypeName: CoroutineBehavior, Assembly-CSharp
+        m_MethodName: set_CanRun
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -639,7 +639,6 @@ MonoBehaviour:
   repeatUntilFalseEvent:
     m_PersistentCalls:
       m_Calls: []
-  canRun: 0
   counterNum: {fileID: 11400000, guid: 3fa7f205fa9ba43449566bd9c9b89e94, type: 2}
   seconds: 1
 --- !u!4 &458472965
