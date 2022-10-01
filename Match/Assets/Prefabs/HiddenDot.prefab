@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8732208365236368255}
   - component: {fileID: 7394935995333513382}
   - component: {fileID: 1627657575848521304}
+  - component: {fileID: 4958203511781223030}
   m_Layer: 7
   m_Name: HiddenDot
   m_TagString: Untagged
@@ -119,6 +120,34 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   colorIDDataListObj: {fileID: 11400000, guid: 5654c944294280f4fb2e83690f41e6dd, type: 2}
+--- !u!114 &4958203511781223030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 763221822631830804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94d1b80938ce2b04985a9f16a0f2de04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameActionObj: {fileID: 11400000, guid: c20525e35456d8c45beb1a54d07b9189, type: 2}
+  onRaiseEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7394935995333513382}
+        m_TargetAssemblyTypeName: UnityEngine.Renderer, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1638561280820543442
 GameObject:
   m_ObjectHideFlags: 0
